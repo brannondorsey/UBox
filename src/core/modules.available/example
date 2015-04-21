@@ -1,0 +1,33 @@
+#!/bin/sh
+
+MODULE_LIST="$MODULE_LIST example"
+
+example_myself="example"
+example_start_order=99
+example_stop_order=01
+example_needed_config="hostname.conf"
+example_crucial="no"
+
+func_example_start(){
+       #Start here the example i.e.
+       echo "Hello World... ${HOST}"
+       local RC=$?
+       _check_rc_  "$example_myself"  "$RC"  "$example_crucial" 
+       return   $RC
+}
+
+func_example_stop(){
+	echo "Stopping Example..."
+       _check_rc_ "$example_myself"  "$RC"
+       return   $RC
+}
+
+func_example_get_config(){
+	echo $example_needed_config
+}
+func_example_get_start_order(){
+	echo $example_start_order
+}
+func_example_get_stop_order(){
+	echo $example_stop_order
+}
