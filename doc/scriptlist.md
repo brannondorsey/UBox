@@ -17,11 +17,11 @@
         Used to distribute files into (sub-)directories.
         Can be switched to debug mode if exported env var. DEBUG=true
 	Uses **distribute_file_into_directory.sh** to work on one folder.
-        # destination folder
-	# overwrite the exsisting files ("true|false") (optional)
-	# File to distribute ( <pathname>|all) (optional)
+        * destination folder
+	* overwrite the exsisting files ("true|false") (optional)
+	* File to distribute ( <pathname>|all) (optional)
             All is currently src/HEADER.txt & src/README.txt
-	# PirateBox Script folder (optional)
+	* PirateBox Script folder (optional)
         
   - **droopy**
         Python2 upload script, which is extended on some functions. Is **not** IPv6 capable. 
